@@ -1,0 +1,14 @@
+INTERFACE
+SUBROUTINE CADS_Detect_Land_Sensitivity( &
+& K__Sensor,                             &
+& K__NumChans,                           &
+& P__Land_Fraction,                      &
+& P__CldLev,                             &
+& K__LandSens_Flag )
+INTEGER(KIND=4),INTENT(IN)  :: K__Sensor
+INTEGER(KIND=4),INTENT(IN)  :: K__NumChans
+REAL(KIND=8)   ,INTENT(IN)  :: P__Land_Fraction
+REAL(KIND=8)   ,INTENT(IN)  :: P__CldLev(:)
+INTEGER(KIND=4),INTENT(OUT) :: K__LandSens_Flag(:)
+END SUBROUTINE CADS_Detect_Land_Sensitivity
+END INTERFACE

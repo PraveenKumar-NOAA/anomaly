@@ -1,0 +1,8 @@
+INTERFACE
+SUBROUTINE CADS_Detect_Cloud_Smooth(KV,KW,PV,PVA)
+INTEGER(KIND=4), INTENT(IN)    :: KV     ! length of V
+INTEGER(KIND=4), INTENT(IN)    :: KW     ! length of averaging window
+REAL(KIND=8),    INTENT(IN)    :: PV(:)  ! original array
+REAL(KIND=8),    INTENT(INOUT) :: PVA(:) ! averaged array
+END SUBROUTINE CADS_Detect_Cloud_Smooth
+END INTERFACE

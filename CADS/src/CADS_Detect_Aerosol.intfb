@@ -1,0 +1,20 @@
+INTERFACE
+SUBROUTINE CADS_Detect_Aerosol( &
+& K__Sensor,                    &
+& K__NChans,                    &
+& K__ChanID,                    &
+& K__Aerosol_Type,              &
+& K__Aerosol_Flag,              &
+& P__Land_Fraction,             &
+& P__ObsBTs,                    &
+& P__CldLev )
+INTEGER(KIND=4),INTENT(IN)  :: K__Sensor
+INTEGER(KIND=4),INTENT(IN)  :: K__NChans
+INTEGER(KIND=4),INTENT(IN)  :: K__ChanID(:)
+INTEGER(KIND=4),INTENT(OUT) :: K__Aerosol_Type
+INTEGER(KIND=4),INTENT(OUT) :: K__Aerosol_Flag(:)
+REAL(KIND=8),   INTENT(IN)  :: P__Land_Fraction
+REAL(KIND=8),   INTENT(IN)  :: P__ObsBTs(:)
+REAL(KIND=8),   INTENT(IN)  :: P__CldLev(:)
+END SUBROUTINE CADS_Detect_Aerosol
+END INTERFACE

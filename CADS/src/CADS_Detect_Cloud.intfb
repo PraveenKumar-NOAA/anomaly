@@ -1,0 +1,36 @@
+INTERFACE
+SUBROUTINE CADS_Detect_Cloud( &
+ & K__Sensor,                 &
+ & K__NChans,                 &
+ & K__ChanID,                 &
+ & K__Minlev,                 &
+ & K__Maxlev,                 &
+ & K__Num_Imager_Chans,       &
+ & K__Chan_ID_Imager,         &
+ & K__Num_Imager_Clusters,    &
+ & K__Cloud_Flag,             &
+ & P__ObsBTs,                 &
+ & P__ModelBTs,               &
+ & P__Chan_Level,             &
+ & P__Cluster_Fraction,       &
+ & P__BT_in_Cluster,          &
+ & P__BT_Overall_Sdev,        &
+ & P__BT_Model_Imager )
+INTEGER(KIND=4), INTENT(IN)  :: K__Sensor
+INTEGER(KIND=4), INTENT(IN)  :: K__NChans
+INTEGER(KIND=4), INTENT(IN)  :: K__ChanID(:)
+INTEGER(KIND=4), INTENT(IN)  :: K__Minlev
+INTEGER(KIND=4), INTENT(IN)  :: K__Maxlev
+INTEGER(KIND=4), INTENT(IN)  :: K__Num_Imager_Chans
+INTEGER(KIND=4), INTENT(IN)  :: K__Chan_ID_Imager(:)
+INTEGER(KIND=4), INTENT(IN)  :: K__Num_Imager_Clusters
+INTEGER(KIND=4), INTENT(OUT) :: K__Cloud_Flag(:)
+REAL(KIND=8),    INTENT(IN)  :: P__ObsBTS(:)
+REAL(KIND=8),    INTENT(IN)  :: P__ModelBTS(:)
+REAL(KIND=8),    INTENT(IN)  :: P__Chan_Level(:)
+REAL(KIND=8),    INTENT(IN)  :: P__Cluster_Fraction(:)
+REAL(KIND=8),    INTENT(IN)  :: P__BT_in_Cluster(:,:)
+REAL(KIND=8),    INTENT(IN)  :: P__BT_Overall_SDev(:)
+REAL(KIND=8),    INTENT(IN)  :: P__BT_Model_Imager(:)
+END SUBROUTINE CADS_Detect_Cloud
+END INTERFACE

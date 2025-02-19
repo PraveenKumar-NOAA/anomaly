@@ -1,0 +1,22 @@
+INTERFACE
+SUBROUTINE CADS_Detect_Cloud_Imager( &
+ & K__Sensor, &
+ & K__Nchans, &
+ & K__Chanid_Imager, &
+ & K__Nclust, &
+ & K__Cloud_Flag, &
+ & P__Cl_Fraction, &
+ & P__Cl_Mean, &
+ & P__Ov_Stddev, &
+ & P__FG_BT )
+INTEGER(KIND=4), INTENT(IN)  :: K__Sensor
+INTEGER(KIND=4), INTENT(IN)  :: K__Nchans
+INTEGER(KIND=4), INTENT(IN)  :: K__Chanid_Imager(:)
+INTEGER(KIND=4), INTENT(IN)  :: K__Nclust
+INTEGER(KIND=4), INTENT(OUT) :: K__Cloud_Flag
+REAL(KIND=8)   , INTENT(IN)  :: P__Cl_Fraction(:)
+REAL(KIND=8)   , INTENT(IN)  :: P__Cl_Mean(:,:)
+REAL(KIND=8)   , INTENT(IN)  :: P__Ov_Stddev(:)
+REAL(KIND=8)   , INTENT(IN)  :: P__FG_BT(:)
+END SUBROUTINE CADS_Detect_Cloud_Imager
+END INTERFACE

@@ -1,0 +1,28 @@
+INTERFACE
+SUBROUTINE CADS_Detect_Cloud_Scenario(&
+ & K__Sensor,&
+ & K__Band,&
+ & K__NumChans,&
+ & K__GradChkInterval,&
+ & K__INDEX,&
+ & K__Chan_High,&
+ & K__Chan_Low,&
+ & K__Chan_Windows,&
+ & K__Imager_Flag,&
+ & K__Scen_Index,&
+ & K__Start_Channel,&
+ & P__DBT)
+INTEGER(KIND=4), INTENT(IN)    :: K__Sensor
+INTEGER(KIND=4), INTENT(IN)    :: K__Band
+INTEGER(KIND=4), INTENT(IN)    :: K__NumChans
+INTEGER(KIND=4), INTENT(IN)    :: K__GradChkInterval
+INTEGER(KIND=4), INTENT(IN)    :: K__INDEX(:)
+INTEGER(KIND=4), INTENT(IN)    :: K__Chan_High
+INTEGER(KIND=4), INTENT(IN)    :: K__Chan_Low
+INTEGER(KIND=4), INTENT(IN)    :: K__Chan_Windows(2)
+INTEGER(KIND=4), INTENT(IN)    :: K__Imager_Flag
+INTEGER(KIND=4), INTENT(OUT)   :: K__Scen_Index
+INTEGER(KIND=4), INTENT(OUT)   :: K__Start_Channel
+REAL(KIND=8)   , INTENT(IN)    :: P__DBT(:)
+END SUBROUTINE CADS_Detect_Cloud_Scenario
+END INTERFACE

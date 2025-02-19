@@ -1,0 +1,16 @@
+INTERFACE
+SUBROUTINE CADS_Detect_Trace_Gas( &
+& K__Sensor,                      &
+& K__NChans,                      &
+& K__ChanID,                      &
+& P__ObsBTs,                      &
+& P__ModelBTs,                    &
+& K__Trace_Gas_Flag )
+INTEGER(KIND=4),INTENT(IN)  :: K__Sensor
+INTEGER(KIND=4),INTENT(IN)  :: K__NChans
+INTEGER(KIND=4),INTENT(IN)  :: K__ChanID(:)
+REAL(KIND=8),INTENT(OUT) :: P__ObsBTs(:)
+REAL(KIND=8),INTENT(OUT) :: P__ModelBTs(:)
+INTEGER(KIND=4),INTENT(OUT) :: K__Trace_Gas_Flag(:)
+END SUBROUTINE CADS_Detect_Trace_Gas
+END INTERFACE
